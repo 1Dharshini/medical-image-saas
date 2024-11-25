@@ -1,6 +1,3 @@
-Here's a revised `README.md` file for your SaaS application using **ReactJS**:
-
----
 
 # **Medical Image SaaS Application**
 
@@ -36,10 +33,9 @@ This SaaS application aims to address the challenges faced by healthcare lab tec
 ---
 
 ## **Tech Stack**
-- **Code Language:** TypeScript (optional if you're not using it yet)
 - **Frontend Framework:** ReactJS
 - **Styling Framework:** Tailwind CSS
-- **Component Library:** Naive UI or Material-UI (as an alternative)
+- **Component Library:** Naive UI or Material-UI
 - **Image Manipulation:** Konva.js
 - **Containerization:** Docker
 - **Preferred File Formats:** PNG, DICOM
@@ -159,11 +155,3 @@ This SaaS application aims to address the challenges faced by healthcare lab tec
 - **Naive UI / Material-UI:** For clean and reusable UI components.
 - **Tailwind CSS:** For modern and responsive design.
 
----
-
-## **License**
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
----
-
-Feel free to adapt this README file to reflect any additional features or adjustments you’ve implemented in your application!
