@@ -1,0 +1,218 @@
+.annotation-tool-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Add this to your AnnotationTools.css */
+.button-container {
+  display: flex;
+  flex-wrap: wrap; /* Ensures buttons wrap to the next line if necessary */
+  gap: 10px; /* Adds consistent spacing between buttons */
+  margin-bottom: 20px; /* Optional: Adds space below the button container */
+}
+
+button {
+  padding: 10px 20px; /* Optional: Adds padding for a better button appearance */
+  font-size: 14px; /* Optional: Adjust the font size of the buttons */
+}
+
+
+.annotation-tool-container:hover {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+h2 {
+  font-size: 32px;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 35px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+}
+
+.tool-selector {
+  display: flex;
+  justify-content: center;
+  gap: 40px;  /* Increased gap for better spacing */
+  margin-top: 50px;
+}
+
+.tool-btn {
+  padding: 16px 35px;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, scale 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.tool-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tool-btn.active {
+  background-color: #1abc9c;
+}
+
+.measurement-btn {
+  padding: 16px 35px;
+  background-color: #f39c12;  /* Distinct yellow color for measurement button */
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.measurement-btn:hover {
+  background-color: #e67e22;  /* Darker yellow on hover */
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.canvas-controls {
+  display: flex;
+  justify-content: center;
+  gap: 40px;  /* Increased gap for better spacing */
+  margin-top: 50px;
+}
+
+.control-btn {
+  padding: 16px 35px;
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.control-btn:hover {
+  background-color: #c0392b;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+canvas {
+  margin-top: 50px;
+  border: 2px solid #ccc;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+canvas:hover {
+  transform: scale(1.02);
+}
+
+.annotations-list {
+  margin-top: 60px;
+  padding: 35px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.annotations-list h3 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.annotations-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.annotations-list li {
+  padding: 12px 0;
+  font-size: 18px;
+  color: #555;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.annotations-list li:hover {
+  background-color: #f0f0f0;
+  padding-left: 15px;
+}
+
+.annotations-list li:last-child {
+  border-bottom: none;
+}
+
+/* Fade-in effect for the annotations list */
+.annotations-list {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Box shadow and animation for buttons when focused */
+.tool-btn:focus,
+.measurement-btn:focus,
+.control-btn:focus {
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.8); /* Adds a glowing effect */
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .annotation-tool-container {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .tool-selector,
+  .canvas-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tool-btn,
+  .measurement-btn,
+  .control-btn {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 15px;
+  }
+
+  canvas {
+    width: 100%;
+    height: auto;
+  }
+}

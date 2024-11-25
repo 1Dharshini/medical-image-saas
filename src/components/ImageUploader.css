@@ -1,0 +1,189 @@
+/* Main container for the upload section */
+.upload-container {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 50px;
+    background: linear-gradient(145deg, #f4f6f9, #e1e5eb); /* Elegant background gradient */
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', Arial, sans-serif;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .upload-container:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px); /* Slight lift effect on hover */
+  }
+  
+  /* Heading */
+  .upload-container h2 {
+    font-size: 2.6rem;
+    color: #34495e;
+    margin-bottom: 25px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .upload-container h2:hover {
+    color: #3498db; /* Subtle hover color change */
+  }
+  
+  /* File input style */
+  .upload-container input[type="file"] {
+    padding: 18px;
+    font-size: 1.2rem;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    width: 100%;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  
+  .upload-container input[type="file"]:hover {
+    border-color: #ff7f50;
+    background-color: #f9f9f9;
+  }
+  
+  .upload-container input[type="file"]:focus {
+    outline: none;
+    border-color: #2ecc71;
+  }
+  
+  /* Error message style */
+  .upload-container .error-message {
+    font-size: 1.3rem;
+    color: #e74c3c;
+    margin-top: 20px;
+    font-weight: 500;
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  /* Keyframe animation for error message */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Image preview section */
+  .image-preview {
+    margin-top: 40px;
+    padding: 25px;
+    background-color: #fefefe;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+  }
+  
+  .image-preview:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+  }
+  
+  .image-preview h3 {
+    font-size: 1.9rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  
+  .image-preview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease;
+  }
+  
+  .image-preview img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Upload button style */
+  .upload-btn {
+    padding: 18px 40px;
+    background-color: #3498db;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 25px;
+  }
+  
+  .upload-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-5px); /* Hover lift effect */
+  }
+  
+  .upload-btn:active {
+    background-color: #1abc9c;
+    transform: translateY(2px); /* Push effect on click */
+  }
+  
+  .upload-btn:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  /* Additional subtle animation for image preview */
+  .image-preview img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .image-preview img:hover {
+    transform: scale(1.08); /* Slightly more noticeable scale on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive styling for mobile devices */
+  @media (max-width: 768px) {
+    .upload-container {
+      padding: 20px;
+      margin: 20px;
+    }
+  
+    .upload-container h2 {
+      font-size: 2rem;
+    }
+  
+    .upload-container input[type="file"] {
+      padding: 15px;
+      font-size: 1.1rem;
+    }
+  
+    .upload-btn {
+      padding: 15px 35px;
+      font-size: 1.1rem;
+    }
+  
+    .image-preview {
+      padding: 20px;
+    }
+  
+    .image-preview h3 {
+      font-size: 1.6rem;
+    }
+  }
+  

@@ -1,0 +1,105 @@
+/* General container */
+.measurement-tool-container {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Dark mode styling */
+.measurement-tool-container.dark-mode {
+  background-color: #2e2e2e;
+  color: #ffffff;
+}
+
+/* Heading styles */
+h2 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+/* Button styles */
+
+/* Form controls styles */
+.settings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.settings label {
+  font-size: 16px;
+  color: #333;
+}
+
+.settings select, .settings input[type="number"], .settings input[type="color"] {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: 10px;
+  width: 150px;
+}
+
+.settings select, .settings input[type="number"], .settings input[type="color"] {
+  background-color: #f8f8f8;
+}
+
+/* Canvas container styling */
+canvas {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Loading and error message styles */
+.loading-indicator .spinner {
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+/* Add this to your AnnotationTools.css */
+.button-container {
+  
+  flex-wrap: wrap; /* Ensures buttons wrap to the next line if necessary */
+  gap: 10px; /* Adds consistent spacing between buttons */
+  margin-bottom: 20px; /* Optional: Adds space below the button container */
+}
+
+button {
+  background: #fff;
+  
+  color: blue;
+  gap: 10px;
+  font-size: 14px; /* Optional: Adjust the font size of the buttons */
+}

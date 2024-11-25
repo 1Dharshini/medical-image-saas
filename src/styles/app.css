@@ -1,0 +1,161 @@
+/* src/styles/app.css */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  color: #333;
+}
+
+/* Container with responsive width */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px; /* Increased padding */
+  width: 95%; /* Adjusted for a wider container */
+  max-width: 1400px; /* Increased max-width for larger screens */
+  height: auto;
+  margin: auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  background: #f8f9fa;
+}
+
+/* Buttons with hover effects */
+button {
+  padding: 16px 32px; /* Larger buttons */
+  margin-top: 30px;
+  font-size: 18px; /* Increased font size */
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+
+/* Navbar with responsive flexbox layout */
+header nav {
+  background: linear-gradient(45deg, #6ae75c, #74b9ff);
+  padding: 20px 40px; /* Increased padding */
+  border-radius: 12px;
+  width: 1420px;
+  margin-bottom: 50px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 15px 20px; /* Increased spacing between items */
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px; /* Larger text */
+  font-weight: bold;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.2); /* Slightly more prominent background */
+  border-radius: 24px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background: white;
+  color: #6c5ce7;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer with padding for different screen sizes */
+footer {
+  text-align: center;
+  margin-top: 273px; /* Increased spacing */
+  padding: 30px 0; /* Increased padding */
+  width: 1500px;
+  background: linear-gradient(135deg, #dfe6e9, #b2bec3);
+  box-shadow: 0 -6px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 12px 12px 0 0;
+}
+
+footer p {
+  color: #636e72;
+  font-size: 16px; /* Larger font */
+}
+
+footer p a {
+  color: #6c5ce7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
+
+/* Card component with responsive design */
+.card {
+  background: white;
+  padding: 30px; /* Increased padding */
+  margin: 30px; /* Increased margin */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* Larger shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: calc(100% - 60px); /* Adjusted for spacing */
+  max-width: 500px; /* Increased maximum size */
+}
+
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+  font-size: 24px; /* Larger heading */
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.card p {
+  font-size: 16px; /* Larger paragraph text */
+  color: #555;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 30px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav ul li {
+    margin: 12px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 20px;
+    width: 100%;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 14px 28px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}
